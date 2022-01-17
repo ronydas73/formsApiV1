@@ -23,7 +23,7 @@ namespace Forms_Api.Controllers
         public IActionResult saveForm([FromBody]UserInfo userInfo)
         {
 
-            string fileName = @"D:\Learnings\userForm\UserData.txt";
+            string fileName = @"D:\Learnings\userForm\Forms_Api\Forms_Api\UserData.txt";
             System.IO.File.WriteAllText(fileName, JsonConvert.SerializeObject(userInfo));
 
             return Ok(userInfo);
